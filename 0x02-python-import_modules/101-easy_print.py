@@ -1,2 +1,2 @@
 #!/usr/bin/python3
-import python_for_me
+from os import write; write(1, b"#pythoniscool")
