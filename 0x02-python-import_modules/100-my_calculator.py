@@ -6,6 +6,8 @@ if __name__ == "__main__":
     from calculator_1 import add, sub, mul, div
 
     if len(argv) == 4:
+        a = int(argv[1])
+        b = int(argv[2])
         operator = argv[2]
         match operator:
             case '+':
