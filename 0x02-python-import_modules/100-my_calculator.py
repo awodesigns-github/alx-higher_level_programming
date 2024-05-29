@@ -5,7 +5,7 @@ if __name__ == "__main__":
     from sys import argv, exit
     from calculator_1 import add, sub, mul, div
 
-    if len(argv) == 3:
+    if len(argv) == 4:
         operator = argv[2]
         match operator:
             case '+':
