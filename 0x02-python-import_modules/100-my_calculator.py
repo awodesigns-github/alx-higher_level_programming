@@ -5,26 +5,24 @@ if __name__ == "__main__":
     from sys import argv, exit
     from calculator_1 import add, sub, mul, div
 
-    if len(argv) == 4:
-        a = int(argv[1])
-        b = int(argv[3])
-        operator = argv[2]
-        match operator:
-            case '+':
-                print("{:d} + {:d} = {:d}".format(a, b, add(a, b)))
-                exit(0)
-            case '-':
-                print("{:d} - {:d} = {:d}".format(a, b, sub(a, b)))
-                exit(0)
-            case '/':
-                print("{:d} / {:d} = {:d}".format(a, b, div(a, b)))
-                exit(0)
-            case '*':
-                print("{:d} * {:d} = {:d}".format(a, b, mul(a, b)))
-                exit(0)
-            case _:
-                print("Unknown operator. Available operators: +, -, * and /")
-                exit(1)
-    else:
+    if len(argv) != 4:
         print("Usage: ./100-my_calculator.py <a> <operator> <b>")
         exit(1)
+
+    operators = {
+            '+': add,
+            '-': sub,
+            '*': mul,
+            '/': div
+            }
+
+    if argv[2] in operators:
+        num1 = int(argv[1])
+        num2 = int(argv[3])
+        operator = operators[argv[2]]
+        output = operator(num1, num2)
+        print("{:d} {:s} {:d} = {:d}".format(num1, argv[2], num2, output))
+    else:
+        print("Unknown operator. Available operators: +, -, * and /")
+        exit(1)
+    exit(0)
