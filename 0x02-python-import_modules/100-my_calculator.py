@@ -7,7 +7,7 @@ if __name__ == "__main__":
 
     if len(argv) == 4:
         a = int(argv[1])
-        b = int(argv[2])
+        b = int(argv[3])
         operator = argv[2]
         match operator:
             case '+':
