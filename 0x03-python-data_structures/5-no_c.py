@@ -6,9 +6,6 @@
 def no_c(my_string):
     if my_string == '':
         return my_string
-    my_list = list(my_string)
-    for i, x in enumerate(my_list):
-        if x == "c" or x == "C":
-            my_list.pop(i)
-    new_string = ''.join(my_list)
-    return new_string
+    new_string = my_string.translate({ord('C') : None})
+    final_string = new_string.translate({ord('c') : None})
+    return final_string
