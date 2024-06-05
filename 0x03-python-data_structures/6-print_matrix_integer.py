@@ -6,5 +6,5 @@
 def print_matrix_integer(matrix=[[]]):
     for sub_list in matrix:
         for item in sub_list:
-            print("{:d}".format(item), end=' ')
+            print("{:d}".format(item), end=' ' if item != sub_list[-1] else '')
         print()
