@@ -1,4 +1,4 @@
-#!usr/bin/python3
+#!/usr/bin/python3
 """ Computes the square value of all integers """
 
 def square_matrix_simple(matrix=[]):
