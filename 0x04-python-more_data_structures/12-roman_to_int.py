@@ -17,4 +17,4 @@ def roman_to_int(roman_string):
     }
     roman_string_uppercase = roman_string.upper()
     numerals_list = list(map(lambda x: roman_dictionary.get(x), roman_string_uppercase))
-    return reduce(lambda x, y: y - x if y > x else x + y, numerals_list)
+    return int(reduce(lambda x, y: y - x if y > x else x + y, numerals_list))
