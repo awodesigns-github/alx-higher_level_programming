@@ -23,4 +23,4 @@ def roman_to_int(roman_string):
         else:
             total += current_number
         previous_number = current_number
-    return total
+    return int(total)
