@@ -18,7 +18,6 @@ def roman_to_int(roman_string):
     previous_number = 0
     for i in reversed(roman_string):
         current_number = roman_dictionary[i]
-        
         if current_number < previous_number:
             total -= current_number
         else:
