@@ -10,8 +10,9 @@ def safe_print_division(a, b):
         return None
     finally:
         if b == 0:
-            result = None
-            print("Inside result: {}".format(result))
+            print("Inside result: {}".format(None))
+            return None
         else:
             result = a / b
             print("Inside result: {}".format(result))
+            return result
