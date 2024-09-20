@@ -10,11 +10,9 @@ def safe_print_list(my_list=[], x=0):
         count = 0
         for i in my_list:
             count += 1
-            print("{}".format(i), end="")
-        print("\n")
+            print("{}".format(i))
         return count
     else:
         for i in range(x):
-            print("{}".format(my_list[i]), end="")
-        print("\n")
+            print("{}".format(my_list[i]))
         return x
